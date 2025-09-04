@@ -23,15 +23,16 @@ async function startDevWithBackup() {
     // 3. 개발 서버 실행
     console.log('🌐 개발 서버 시작...\n');
     console.log('─'.repeat(80));
-    console.log('📌 서버 주소: http://localhost:8080');
+    console.log('📌 서버 주소: http://localhost:3000');
     console.log('📌 자동 백업: 30분마다 또는 10개 파일 변경시');
     console.log('📌 종료: Ctrl+C');
     console.log('─'.repeat(80));
     console.log('\n');
     
-    const server = spawn('npx', ['live-server', 'src'], {
+    const server = spawn('npx', ['live-server', '--config=.live-server.json'], {
         stdio: 'inherit',
-        shell: true
+        shell: true,
+        cwd: path.join(__dirname, '..')
     });
     
     // 종료 처리

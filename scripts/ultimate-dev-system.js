@@ -56,16 +56,17 @@ class UltimateDevSystem {
         // 5. 개발 서버 시작
         console.log('🌍 개발 서버 시작...\n');
         console.log('═'.repeat(50));
-        console.log('📍 서버: http://localhost:8080');
+        console.log('📍 서버: http://localhost:3000');
         console.log('💾 백업: 30분마다 자동');
         console.log('🌐 GitHub: 1시간마다 자동');
         console.log('🛑 종료: Ctrl+C');
         console.log('═'.repeat(50));
         console.log('\n');
         
-        const server = spawn('npx', ['live-server', 'src'], {
+        const server = spawn('npx', ['live-server', '--config=.live-server.json'], {
             stdio: 'inherit',
-            shell: true
+            shell: true,
+            cwd: path.join(__dirname, '..')
         });
         this.processes.push(server);
         

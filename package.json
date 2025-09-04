@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "node scripts/ultimate-dev-system.js",
     "dev:simple": "node scripts/dev-with-backup.js",
-    "dev:basic": "npm run backup:auto && live-server src",
+    "dev:basic": "npm run backup:auto && live-server --config=.live-server.json",
+    "server": "live-server --config=.live-server.json",
     "backup": "node scripts/backup-manager.js",
     "backup:create": "node scripts/backup-manager.js create",
     "backup:list": "node scripts/backup-manager.js list",
@@ -35,7 +36,7 @@
     "eslint": "^8.0.0",
     "extract-zip": "^2.0.1",
     "jest": "^29.0.0",
-    "live-server": "^1.2.0",
+    "live-server": "^1.2.2",
     "webpack": "^5.0.0",
     "webpack-cli": "^5.0.0"
   }
