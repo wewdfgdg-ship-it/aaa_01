@@ -1,0 +1,5 @@
+{
+  "interval": 1800000,
+  "maxChanges": 10,
+  "comment": "interval은 밀리초 단위 (1800000 = 30분), maxChanges는 백업 트리거 파일 수"
+}

@@ -1,0 +1,5 @@
+{
+  "syncInterval": 3600000,
+  "maxChanges": 20,
+  "comment": "syncInterval은 밀리초 단위 (3600000 = 1시간), maxChanges는 GitHub 동기화 트리거 파일 수"
+}

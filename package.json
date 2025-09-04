@@ -4,13 +4,19 @@
   "description": "표준화된 웹 개발 프로젝트 템플릿",
   "main": "src/index.js",
   "scripts": {
-    "dev": "npm run backup:auto && live-server src",
+    "dev": "node scripts/ultimate-dev-system.js",
+    "dev:simple": "node scripts/dev-with-backup.js",
+    "dev:basic": "npm run backup:auto && live-server src",
     "backup": "node scripts/backup-manager.js",
     "backup:create": "node scripts/backup-manager.js create",
     "backup:list": "node scripts/backup-manager.js list",
     "backup:restore": "node scripts/backup-manager.js restore",
     "backup:auto": "node scripts/backup-manager.js create '개발 서버 시작 전 자동 백업'",
+    "backup:watch": "node scripts/auto-backup.js",
     "backup:init": "node scripts/init-backup.js",
+    "git:sync": "node scripts/git-auto-sync.js",
+    "git:push": "C:\\Users\\Desktop\\aaa\\sync-to-github.bat",
+    "ultimate": "node scripts/ultimate-dev-system.js",
     "test": "jest",
     "lint": "eslint src/**/*.js",
     "build": "webpack --mode production",
@@ -25,13 +31,12 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "archiver": "^5.3.2",
     "eslint": "^8.0.0",
+    "extract-zip": "^2.0.1",
     "jest": "^29.0.0",
     "live-server": "^1.2.0",
     "webpack": "^5.0.0",
-    "webpack-cli": "^5.0.0",
-    "archiver": "^5.3.0",
-    "extract-zip": "^2.0.1"
-  },
-  "dependencies": {}
+    "webpack-cli": "^5.0.0"
+  }
 }
