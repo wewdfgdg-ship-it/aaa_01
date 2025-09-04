@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "node scripts/ultimate-dev-system.js",
     "dev:simple": "node scripts/dev-with-backup.js",
-    "dev:basic": "npm run backup:auto && live-server --config=.live-server.json",
-    "server": "live-server --config=.live-server.json",
+    "dev:basic": "npm run backup:auto && live-server src",
+    "server": "live-server src",
     "backup": "node scripts/backup-manager.js",
     "backup:create": "node scripts/backup-manager.js create",
     "backup:list": "node scripts/backup-manager.js list",
